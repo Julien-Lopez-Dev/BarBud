@@ -1,14 +1,12 @@
 {
   "expo": {
-    "name": "my-gym-bud-v.0",
-    "slug": "my-gym-bud-v.0",
+    "name": "LiftBud",
+    "slug": "lift-bud",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
     "splash": {
       "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "resizeMode": "cover"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -17,10 +15,27 @@
       "**/*"
     ],
     "ios": {
+      "bundleIdentifier": "com.julien24lopez.liftbud",
       "supportsTablet": true
     },
     "web": {
-      "favicon": "./assets/favicon.png"
-    }
+      "favicon": "./assets/icon.png"
+    },
+    "androidStatusBar" : {
+      "barStyle" : "dark-content"
+    },
+     "androidNavigationBar" : {
+      "barStyle" : "light-content",
+      "backgroundColor" : "#000000"
+    },
+    "android": {
+      "package": "com.julien24lopez.liftbud",
+      "icon": "./assets/icon.png",
+      "softwareKeyboardLayoutMode": "pan",
+      "adaptiveIcon": {
+        "foregroundImage" : "./assets/foregroundImage.png",
+         "backgroundImage" : "./assets/backgroundImage.png"
+      }
+    } 
   }
 }

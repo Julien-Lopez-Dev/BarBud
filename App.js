@@ -1,21 +1,33 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useState } from "react";
+import { Dimensions, StyleSheet, View } from "react-native";
 
-export default function App() {
+import WeightScreen from "./src/screens/WeightScreen";
+import TestScreen from "./src/screens/TestScreen";
+
+export default MainScreen = () => {
+  const [focused, setFocused] = useState(false);
+
+  const { width } = Dimensions.get("window");
+
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <WeightScreen
+        {...{ focused, setFocused }}
+        style={{
+          flex: 1,
+          width,
+          backgroundColor: "#2d373b",
+        }}
+      />
+      {/* <TestScreen /> */}
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center",
   },
 });
